@@ -1,3 +1,12 @@
+---  
+Important Note - This flow doesn't specify a RoleSessionName and hence the default value will be used to land user into QuickSight.  
+Each users coming into QuickSight has to be uniquely identified for following reasons.
+1) License compliance.
+2) Avoid throttling / adverse impact to user experience.
+3) Facilitates use of Row and Column level security.   
+**Please ensure that user name/identifier is mapped as RoleSessionName while getting CognitoIdentityCredentials.**
+---
+
 # aws-cognito-quicksight-auth
 A simple JavaScript frontend and SAM template to spin up a serverless backend, federating Cognito User Pools users to QuickSight.
 <p align="center">
